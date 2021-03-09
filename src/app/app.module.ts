@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgetComponent } from './forget/forget.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ForgetComponent } from './forget/forget.component';
     LayoutComponent,
     LoginComponent,
     SignupComponent,
-    ForgetComponent
+    ForgetComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
