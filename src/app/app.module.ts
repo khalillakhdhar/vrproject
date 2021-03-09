@@ -10,6 +10,7 @@ import { ForgetComponent } from './forget/forget.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { TesteComponent } from './teste/teste.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     ForgetComponent,
     NavbarComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    TesteComponent
   ],
   imports: [
     BrowserModule,
