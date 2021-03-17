@@ -11,6 +11,10 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { TesteComponent } from './teste/teste.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ReclamationComponent } from './reclamation/reclamation.component';
+import { UsersComponent } from './users/users.component';
+import { CoursComponent } from './cours/cours.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { TesteComponent } from './teste/teste.component';
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    TesteComponent
+    TesteComponent,
+    ProfileComponent,
+    ReclamationComponent,
+    UsersComponent,
+    CoursComponent
   ],
   imports: [
     BrowserModule,
