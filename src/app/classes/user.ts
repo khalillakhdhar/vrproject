@@ -8,6 +8,6 @@ export class User {
     adresse:string;
     classe:string;
     specialite:string;
-    etat:string;
+    grade:string;
 
 }
