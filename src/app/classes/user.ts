@@ -7,5 +7,7 @@ export class User {
     mdp:string;
     adresse:string;
     classe:string;
+    specialite:string;
+    etat:string;
 
 }
