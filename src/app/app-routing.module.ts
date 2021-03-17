@@ -6,6 +6,7 @@ import { SignupComponent } from './signup/signup.component';
 import { TesteComponent } from './teste/teste.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
+import { ReclamationComponent } from './reclamation/reclamation.component';
 
 const routes: Routes = [
   {path:'dashboard',component:LayoutComponent,children:
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:"teste",component:TesteComponent},
   {path:'profile',component:ProfileComponent},
   {path:'users',component:UsersComponent},
-  {path:'profile',component:ProfileComponent},
+  {path:'reclamation',component:ReclamationComponent},
   {path:'profile',component:ProfileComponent},
 
 ],
