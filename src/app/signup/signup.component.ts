@@ -18,7 +18,7 @@ user:User;
 {
 let us=Object.assign({},this.user); //convertir la classe en objet json
 this.userService.create_NewUser(us);
-alert("ajouté avec succés");
+window.location.replace("");
 
 
 }
