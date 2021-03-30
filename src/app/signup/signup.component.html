@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <textarea class="form-control" [(ngModel)]="user.adresse" name="adresse" placeholder="Adresse"></textarea>
+          <textarea class="form-control"  [(ngModel)]="user.adresse" name="adresse" placeholder="Adresse"></textarea>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-globe"></span>
@@ -70,7 +70,7 @@
          
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+            <button type="submit" (click)="add()" class="btn btn-primary btn-block">S'inscrire</button>
           </div>
           <!-- /.col -->
         </div>
