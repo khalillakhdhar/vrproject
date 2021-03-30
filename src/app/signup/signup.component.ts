@@ -14,5 +14,12 @@ user:User;
   ngOnInit(): void {
     this.user=new User();
   }
+ add()
+{
+let us=Object.assign({},this.user); //convertir la classe en objet json
+this.userService.create_NewUser(us);
+alert("ajouté avec succés");
 
+
+}
 }
