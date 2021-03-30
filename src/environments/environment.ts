@@ -5,7 +5,17 @@
 export const environment = {
   production: false,
   firbase:
-  {}
+  {
+    apiKey: "AIzaSyBpdPcmfVKLKrUItTncpge2cpo4yklC-TM",
+    authDomain: "vrprojet-7c513.firebaseapp.com",
+    projectId: "vrprojet-7c513",
+    storageBucket: "vrprojet-7c513.appspot.com",
+    messagingSenderId: "20267637082",
+    appId: "1:20267637082:web:ae6577699cba502e3e3b63",
+    measurementId: "G-5SVY76HRP0"
+
+
+  }
 };
 
 /*
