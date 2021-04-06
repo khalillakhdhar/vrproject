@@ -50,6 +50,8 @@ login()
   if((this.user.email==us.email)&&(this.user.mdp==us.mdp))
   {
     this.exist=true;
+    localStorage.setItem("id",us.id);
+    localStorage.setItem("grade",us.grade);
     window.location.replace("/dashboard/profile");
   }
   }
