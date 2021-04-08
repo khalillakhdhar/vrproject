@@ -10,6 +10,8 @@ username="Aya et chaima";
   constructor() { }
 
   ngOnInit(): void {
+    if(localStorage.length==0)
+    window.location.replace("../");
   }
 
 }
