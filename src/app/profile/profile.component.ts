@@ -71,8 +71,11 @@ this.id=localStorage.getItem("id");
 
   update()
   {
+    this.user.classe="ND";
+    this.user.specialite="ND";
+    
     let us=Object.assign({},this.user);
-    this.userService.update_User(this.id,us);
+    this.userService.update_User(this.user.id,us);
     alert("modifié");
 
 
