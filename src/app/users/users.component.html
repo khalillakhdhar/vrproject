@@ -18,15 +18,14 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Trident</td>
-            <td>Internet
-              Explorer 4.0
+          <tr *ngFor="let u of users">
+            <td>{{u.nom}}</td>
+            <td>{{u.prenom}}
             </td>
-            <td>Win 95+</td>
-            <td> 4</td>
-            <td>X</td>
-            <td> <span class="label label-success" >enseignant</span></td>
+            <td>{{u.age}}</td>
+            <td> {{u.email}}</td>
+            <td>{{u.adresse}}</td>
+            <td> <span class="label label-success" >{{u.grade}}</span></td>
             <td><button class="btn btn-danger">Supprimer</button></td>
           </tr>
         
