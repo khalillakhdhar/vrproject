@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Reclamation } from '../classes/reclamation';
+import { ReclamationService } from '../services/reclamation.service';
 
 @Component({
   selector: 'app-reclamation',
@@ -7,9 +9,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReclamationComponent implements OnInit {
 
-  constructor() { }
 
+  reclamations:Reclamation[];
+  id:string;
+  reclamation:Reclamation;
+  constructor(private reclamationService:ReclamationService) { }
+  
   ngOnInit(): void {
+    this.reclamation=new Reclamation();
+    this.reclamations=[];
+this.id=localStorage.getItem("id");
+    this.read();
+    
   }
+  add()
+  {
+    this.reclamation.date=Date();
+    let rec=Object.assign({},this.reclamation);
+this.reclamationService.create_NewReclamation(rec);
+  }
+  read()
+  {
+    this.reclamationService.read_Reclamations().subscribe(data => {
+  
+      this.reclamations = data.map(e => {
+        return {
+          id: e.payload.doc.id,
 
+          texte: e.payload.doc.data()["texte"],
+          date: e.payload.doc.data()["date"],
+          
+   
+  
+  
+        };
+      });
+      console.log(this.reclamations);
+    });
+  
+  
+  }
 }
