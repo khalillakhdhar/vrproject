@@ -27,6 +27,7 @@ this.id=localStorage.getItem("id");
     this.reclamation.date=Date();
     let rec=Object.assign({},this.reclamation);
 this.reclamationService.create_NewReclamation(rec);
+this.reclamation=new Reclamation();
   }
   read()
   {
