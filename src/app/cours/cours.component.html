@@ -1,37 +1,55 @@
 <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Gestion des utilisateurs</h3>
+        <h3 align="center" >Gestion des cours</h3>
+        <form action="">
+        
+          <table class="table table-borderless">
+<tr><td>fichier</td><td><input type="file"  (change)="onFileSelected($event)" class="form-control" name="f"></td></tr>
+<tr><td>Matiére</td><td><input type="text" [(ngModel)]="cours.matiere" class="form-control" name="matiere"></td></tr>
+<tr><td>fichier</td><td><textarea name="description" [(ngModel)]="cours.description" class="form-control"></textarea></td></tr>
+<tr><td>fichier</td><td><input type="text" [(ngModel)]="cours.classe" class="form-control" name="classe"></td></tr>
+<tr><td colspan="2"><button class="btn btn-primary" (click)="add()">Ajouter</button></td></tr>
+
+
+
+
+        </table></form>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
         <table id="example2" class="table table-bordered table-hover">
           <thead>
           <tr>
-            <th>titre</th>
             <th>Description</th>
-            <th>Enseignant</th>
+            <th>date ajout</th>
+            <th>classe</th>
+            <th>Matiére</th>
+            <th>Téléchargement</th>
 
             <th>Action</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Trident</td>
-            <td>Internet
-              Explorer 4.0
+          <tr *ngFor="let cr of courses">
+            <td>{{cr.description}}</td>
+            <td>{{cr.date_heure | date:'medium'}}
             </td>
        
-            <td> <span class="label label-success" >enseignant</span></td>
+            <td> <span class="label label-success" >{{cr.classe}}</span></td>
+            <td><a href="{{cr.url}}">télécharger</a>
+            </td>
             <td><button class="btn btn-danger">Supprimer</button></td>
           </tr>
         
           </tbody>
           <tfoot>
           <tr>
-            <th>titre</th>
             <th>Description</th>
-            <th>responsable</th>
+            <th>date ajout</th>
+            <th>classe</th>
+            <th>Matiére</th>
+            <th>Téléchargement</th>
 
             <th>Action</th>
           </tr>
