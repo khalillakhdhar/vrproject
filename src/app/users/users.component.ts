@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../classes/user';
 import { UserService } from '../services/user.service';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @Component({
   selector: 'app-users',
@@ -11,6 +12,8 @@ export class UsersComponent implements OnInit {
 
   users:User[];
   id:string;
+  public query: any = '';
+p: number = 1;
   constructor(private userService:UserService) { }
   
   ngOnInit(): void {
