@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Cours } from '../classes/cours';
 import { CoursService } from '../services/cours.service';
 import { map, finalize } from "rxjs/operators";
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @Component({
   selector: 'app-cours',
@@ -19,6 +20,8 @@ selectedFile: File = null;
 fb = "";
 userData: any; // Save logged in user data
 cuse: any;
+public query: any = '';
+p: number = 1;
   constructor(private coursService:CoursService,  private storage: AngularFireStorage,
     public afs: AngularFirestore, // Inject Firestore service
     ) { }
