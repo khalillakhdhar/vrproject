@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Reclamation } from '../classes/reclamation';
 import { ReclamationService } from '../services/reclamation.service';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @Component({
   selector: 'app-reclamation',
@@ -11,7 +12,7 @@ export class ReclamationComponent implements OnInit {
 
 
   reclamations:Reclamation[];
-  id:string;
+  id:string;p: number = 1;
   reclamation:Reclamation;
   constructor(private reclamationService:ReclamationService) { }
   
