@@ -31,6 +31,7 @@ import { UsersComponent } from './users/users.component';
 import { CoursComponent } from './cours/cours.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { SearchPipe } from './pipes/search.pipe';
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     FormsModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
