@@ -30,6 +30,7 @@ import { ReclamationComponent } from './reclamation/reclamation.component';
 import { UsersComponent } from './users/users.component';
 import { CoursComponent } from './cours/cours.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     ReclamationComponent,
     UsersComponent,
-    CoursComponent
+    CoursComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
