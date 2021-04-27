@@ -20,13 +20,13 @@
     <div class="container-fluid">
 
       <!-- Timelime example  -->
-      <div class="row" *ngFor="let recl of reclamations">
+      <div class="row" *ngFor="let recl of reclamations |   paginate: { itemsPerPage: 2, currentPage: p }">
         <div class="col-md-12">
           <!-- The time line -->
           <div class="timeline">
             <!-- timeline time label -->
             <div class="time-label">
-              <span class="bg-red">{{recl.date | date:'medium'}}</span>
+              <span class="bg-lightblue">{{recl.date | date:'medium'}}</span>
             </div>
             <!-- /.timeline-label -->
             <!-- timeline item -->
@@ -52,6 +52,8 @@
         </div>
         <!-- /.col -->
       </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
     </div>
     <!-- /.timeline -->
 
