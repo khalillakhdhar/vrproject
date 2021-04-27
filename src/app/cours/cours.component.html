@@ -7,8 +7,8 @@
           <table class="table table-borderless">
 <tr><td>fichier</td><td><input type="file"  (change)="onFileSelected($event)" class="form-control" name="f"></td></tr>
 <tr><td>Matiére</td><td><input type="text" [(ngModel)]="cours.matiere" class="form-control" name="matiere"></td></tr>
-<tr><td>fichier</td><td><textarea name="description" [(ngModel)]="cours.description" class="form-control"></textarea></td></tr>
-<tr><td>fichier</td><td><input type="text" [(ngModel)]="cours.classe" class="form-control" name="classe"></td></tr>
+<tr><td>description</td><td><textarea name="description" [(ngModel)]="cours.description" class="form-control"></textarea></td></tr>
+<tr><td>classe</td><td><input type="text" [(ngModel)]="cours.classe" class="form-control" name="classe"></td></tr>
 <tr><td colspan="2"><button class="btn btn-primary" (click)="add()">Ajouter</button></td></tr>
 
 
@@ -37,9 +37,13 @@
             </td>
        
             <td> <span class="label label-success" >{{cr.classe}}</span></td>
-            <td><a href="{{cr.url}}">télécharger</a>
+            <td>
+              {{cr.matiere}}
             </td>
-            <td><button class="btn btn-danger">Supprimer</button></td>
+            <td>
+              <a target="_blank" href="{{cr.url}}">télécharger</a>
+            </td>
+            <td><button (click)="delete(cr.id)" class="btn btn-danger">Supprimer</button></td>
           </tr>
         
           </tbody>
