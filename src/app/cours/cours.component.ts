@@ -83,4 +83,11 @@ onFileSelected(event) {
       }
     });
 }
+delete(id)
+{
+  if(confirm("êtes vous sûre de vouloir supprimer ce cours?"))
+  {
+    this.coursService.delete_Cours(id);
+  }
+}
 }
