@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StreamingService } from '../services/streaming.service';
+import { Streaming } from '../classes/streaming';
 
 @Component({
   selector: 'app-teste',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teste.component.css']
 })
 export class TesteComponent implements OnInit {
+streaming:Streaming;
+  constructor(private api:StreamingService) { }
 
-  constructor() { }
 
   ngOnInit(): void {
   }
