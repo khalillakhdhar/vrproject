@@ -21,6 +21,8 @@ add()
 {
   let strm=Object.assign({},this.streaming);
   this.api.create_NewStreaming(strm);
+  this.streaming=new Streaming();
+
 }
 read()
 {
