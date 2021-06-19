@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { ReclamationComponent } from './reclamation/reclamation.component';
 import { CoursComponent } from './cours/cours.component';
+import { SeanceComponent } from './seance/seance.component';
 
 const routes: Routes = [
   {path:'dashboard',component:LayoutComponent,children:
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'users',component:UsersComponent},
   {path:'reclamation',component:ReclamationComponent},
   {path:'cours',component:CoursComponent},
+  {path:'seance',component:SeanceComponent},
 
 ],
 

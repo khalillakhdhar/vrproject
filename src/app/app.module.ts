@@ -32,6 +32,7 @@ import { CoursComponent } from './cours/cours.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SeanceComponent } from './seance/seance.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ReclamationComponent,
     UsersComponent,
     CoursComponent,
-    SearchPipe
+    SearchPipe,
+    SeanceComponent
   ],
   imports: [
     BrowserModule,
