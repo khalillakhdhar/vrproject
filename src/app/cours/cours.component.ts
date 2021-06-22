@@ -20,6 +20,7 @@ selectedFile: File = null;
 fb = "";
 userData: any; // Save logged in user data
 cuse: any;
+grade:string;
 public query: any = '';
 p: number = 1;
   constructor(private coursService:CoursService,  private storage: AngularFireStorage,
@@ -29,6 +30,7 @@ p: number = 1;
   ngOnInit(): void {
     this.cours=new Cours();
     this.read();
+    this.grade=localStorage.getItem("grade");
   }
   read()
   {
