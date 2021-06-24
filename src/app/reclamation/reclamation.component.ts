@@ -51,4 +51,13 @@ this.reclamation=new Reclamation();
   
   
   }
+  delete(id)
+  {
+    if(confirm("vous voulez supprimer?"))
+    {
+      this.reclamationService.delete_Reclamation(id);
+    }
+
+
+  }
 }

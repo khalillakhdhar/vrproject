@@ -50,4 +50,13 @@ this.id=localStorage.getItem("id");
   
   
   }
+  delete(id)
+  {
+    if(confirm("vous voulez supprimer?"))
+    {
+      this.userService.delete_User(id);
+    }
+
+
+  }
 }
